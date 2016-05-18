@@ -41,14 +41,6 @@ class UsersController < ApplicationController
     end
   end
 
-#    @user = User.find(params[:id])
-#    @user.assign_attributes(params[:user])
-#    if @user.save
-#      flash[:success] = "Up date!"
-#      redirect_to @user
-#    end
-  
-
 
 
   private
