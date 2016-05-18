@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
   def edit
   @user = User.find(params[:id])
-   if @current_user != @user
+   if current_user != @user
       redirect_to:root
    end
   end
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
   def update
    @user = User.find(params[:id])
-    if @current_user != @user
+    if current_user != @user
        redirect_to:root
     end
   end
