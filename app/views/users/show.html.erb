@@ -1,5 +1,21 @@
-<h1>
+<div class="form-horizontal">
   <%= gravatar_for @user %>
-  <%= @user.name %>
-  
-</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">name</div>
+  <div class="panel-body">
+    <%= @user.name %>
+  </div>
+  <div class="panel-heading">email</div>
+  <div class="panel-body">
+    <%= @user.email %>
+  </div>
+  <div class="panel-heading">profile</div>
+  <div class="panel-body">
+    <%= @user.profile %>
+  </div>
+  <div class="panel-heading">area</div>
+  <div class="panel-body">
+    <%= @user.area %>
+  </div>
+</div>     
+</div>     

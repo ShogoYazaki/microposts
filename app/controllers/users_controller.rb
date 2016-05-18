@@ -21,26 +21,28 @@ class UsersController < ApplicationController
     end
   end
 
+
   def edit
-    @user = User.find(params[:id])
+  @user = User.find(params[:id])
+   if @current_user != @user
+      redirect_to:root
+   end
   end
 
+
   def update
-  @user = User.find(params[:id])
-   if @user.update(user_params)
-     flash[:success] = "Up date!"
-     redirect_to @user
-   else
-    flash[:error] = "Error!"
-    render 'show'
-   end
+   @user = User.find(params[:id])
+    if @current_user != @user
+       redirect_to:root
+    end
+  end
+
 #    @user = User.find(params[:id])
 #    @user.assign_attributes(params[:user])
 #    if @user.save
 #      flash[:success] = "Up date!"
 #      redirect_to @user
 #    end
-  end
   
 
 
