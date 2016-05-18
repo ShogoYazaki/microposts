@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     if current_user != @user
        redirect_to:root
     end
-    if @user.save
+    if @user.update(user_params)
       flash[:success] = "Up date!"
       redirect_to @user
     end
