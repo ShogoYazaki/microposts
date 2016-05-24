@@ -22,7 +22,6 @@ class UsersController < ApplicationController
     end
   end
 
-
   def edit
   @user = User.find(params[:id])
    if current_user != @user
@@ -41,6 +40,18 @@ class UsersController < ApplicationController
       redirect_to @user
     end
   end
+  
+  def followers
+    @user = User.find(params[:id])
+    @users = @user.follower_users
+  end
+
+  def followings
+    @user = User.find(params[:id])
+    @users = @user.following_users
+  end
+
+  
 
 
   private
