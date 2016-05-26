@@ -14,7 +14,8 @@
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
-    <% end %>
+  <% end %>
+    </div>
     <%= link_to 'Follow',followings_user_path(@user) %>
-    <%= link_to 'Follower', followers_user_path(@user) %>  </div>
+    <%= link_to 'Follower', followers_user_path(@user) %>  
 </div>
